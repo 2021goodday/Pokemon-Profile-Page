@@ -35,4 +35,21 @@ window.addEventListener('load', () => {
     }
   });
   
+  window.addEventListener('DOMContentLoaded', function() {
+    if (window.innerWidth <= 720) {
+      var profileInfo = document.querySelector('.profile-info');
+      var profileBg = document.querySelector('.profile-bg');
+  
+      // Set the height and width of .profile-bg to match .profile-info
+      profileBg.style.width = profileInfo.offsetWidth + 'px';
+      profileBg.style.height = profileInfo.offsetHeight + 'px';
+  
+      // Update the dimensions when the window is resized
+      window.addEventListener('resize', function() {
+        profileBg.style.width = profileInfo.offsetWidth + 'px';
+        profileBg.style.height = profileInfo.offsetHeight + 'px';
+      });
+    }
+  });
+  
   
