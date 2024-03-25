@@ -3,16 +3,7 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat");
 body {
   font-family: "Montserrat", sans-serif;
-  background-size: 150% 150%;
-  animation: backgroundAnimation 10s ease infinite;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  margin: 0;
-  
-  background-image: linear-gradient(
+  background: linear-gradient(
     45deg,
     #2f9280 6%,
     #16a085 30%,
@@ -21,6 +12,14 @@ body {
     #2b86c5 84%,
     #055c4d 99%
   );
+  background-size: 150% 150%;
+  animation: backgroundAnimation 10s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
 }
 
 .profile {
@@ -60,9 +59,9 @@ body {
   border-radius: 10px;
   width: 45%;
   flex: none;
+  background-image: url("https://i.ibb.co/NKT81tT/profile-pic-copy.png");
   background-size: cover;
   background-position: center;
-  background-image: url("https://i.ibb.co/NKT81tT/profile-pic-copy.png");
 }
 
 .profile-image::before {
@@ -182,6 +181,11 @@ h1.second-name {
   transform: scale(0.9);
 }
 
+.arrow {
+  flex: 0 1 75px;
+  background-image: url("#");
+}
+
 .right {
   transform: rotate(180deg);
 }
@@ -190,6 +194,12 @@ h1.second-name {
   transform: scale(0.9) rotate(180deg);
 }
 
+.close {
+  background-image: url("#");
+  position: absolute;
+  top: 5px;
+  right: 10px;
+}
 /*XP BAR*/
 .profile-info .XP-bar {
   list-style-type: none;
@@ -234,7 +244,6 @@ h1.second-name {
   left: 0;
   display: block;
 }
-
 @media only screen and (max-aspect-ratio: 4/7) and (max-width: 600px) {
   .profile {
     margin: 3%;
@@ -310,53 +319,172 @@ h1.second-name {
     opacity: 1;
   }
 }
-@media (max-width: 720px) {
-  .container {
-    flex-direction: column-reverse;
+@media only screen and (max-width: 945px) {
+  .profile-info {
+    margin-top: 15%;
+    margin-bottom: 3%;
+    margin-left: -0.5em;
   }
 
-  .profile-image {
-    position: absolute;
-    border-radius: 10px;
-    width: 45%;
-    top: 0; 
-    left: 30%; 
-    transform: translateX(-50%); 
-    z-index: 1; 
-    background-image: url("profile-pic.png");
-    background-size: cover;
-    background-position: center;
-    min-height: 60%;
+  h1 {
+    padding-left: 2em;
   }
-  
-  .profile-bg {
-    position: absolute;
-    top: 74%; 
-    right: 20px; /* Adjust the right spacing */
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 30px 50px -20px rgba(14, 0, 47, 0.21);
-    width: calc(100% - 75px);
-    height: 65%;
-    z-index: 0; /* Ensure it's below .profile-image */
+
+  .profile-icons {
+    flex-direction: row;
+    align-items: center;
   }
-  
+
+  .profile-icons a {
+    margin-right: 3px;
+  }
+
+  .XP-bar {
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 845px) {
   .profile-info {
-    position: absolute;
-    top: 75%; /* Adjust the top spacing */
-    left: 50%; /* Position it at the center horizontally */
-    transform: translateX(-50%); /* Adjust for center alignment */
-    z-index: 2; /* Ensure it's above .profile-bg */
-    width: 80%; /* Set a width */
-    margin: auto; /* Center horizontally */
-    padding: 20px; /* Add padding */
-    background-color: rgba(255, 255, 255, 0.8); /* Add a background color */
-    border-radius: 10px; /* Add border radius */
-    text-align: center; /* Center align the content */
-    order: 1; 
+    margin-top: 15%;
+    margin-bottom: 2%;
+    margin-left: -2em;
+  }
+
+  h1 {
+    padding-left: 2em;
+  }
+
+  .profile-icons {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .profile-icons a {
+    margin-right: 3px;
+  }
+
+  .XP-bar {
+    margin-bottom: 10px;
+    width: 90%;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .profile-info {
+    margin-top: 15%;
+    margin-bottom: 1%;
+    margin-left: -3em;
+    font-size: 0.8em;
+  }
+
+  .profile-info h1 {
+    padding-left: 2.5em;
+    font-size: 2.5em;
+  }
+
+  .profile-icons {
+    flex-direction: row;
+    align-items: center;
+    margin-left: -1.5em;
+  }
+
+  .profile-icons a {
+    margin-right: 3px;
+  }
+
+  .XP-bar {
+    margin-bottom: 10px;
+    width: 95%;
+    margin-left: -1em;
+  }
+}
+@media only screen and (max-width: 694px) {
+  .profile-info {
+    margin-top: 30%;
+    margin-bottom: 1%;
+    margin-left: -1em;
+    font-size: 0.8em;
+  }
+  .profile-info p {
+    line-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 200px;
+  }
+
+  .profile-info h1 {
+    padding-left: 2.5em;
+    font-size: 2.5em;
+  }
+
+  .profile-icons {
+    flex-direction: row;
+    align-items: center;
+    margin-left: -1.5em;
+    width: 65%;
+  }
+
+  .profile-icons a {
+    margin-right: 3px;
+  }
+
+  .XP-bar {
+    margin-bottom: 10px;
+    width: 65%;
+    margin-left: -1em;
   }
   .statistics {
-    order: 2; 
-    
+    font-size: 1em;
   }
+  .statistics p strong {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 496px) {
+  .profile-info p {
+    line-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 150px;
+  }
+  .XP-bar {
+    margin-bottom: 10px;
+    width: 55%;
+    margin-left: -1em;
+  }
+  .statistics {
+    font-size: 1em;
+  }
+  .statistics p strong {
+    font-size: 1em;
+  }
+}
+@media only screen and (max-width: 395px) {
+  .profile-info p {
+    line-height: 1.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 250px;
+  }
+  .XP-bar {
+    margin-bottom: 10px;
+    width: 100%;
+    margin-left: -1em;
+  }
+  .profile-icons {
+    flex-direction: row;
+    align-items: center;
+    margin-left: -1.5em;
+    width: 100%;
+  }
+  .statistics p{
+    font-size: 1em;
+  }
+  .statistics {
+    margin-left: -95px;
+  }
+
+  
 }
