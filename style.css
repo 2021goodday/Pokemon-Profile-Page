@@ -65,7 +65,6 @@ body {
   border-radius: 10px;
   width: 45%;
   flex: none;
-  background-image: url("profile-pic.png");
   background-size: cover;
   background-position: center;
 }
@@ -324,10 +323,10 @@ h1.second-name {
     position: absolute;
     border-radius: 10px;
     width: 45%;
-    top: 0; /* Place it at the top */
-    left: 30%; /* Position it at the center horizontally */
-    transform: translateX(-50%); /* Adjust for center alignment */
-    z-index: 1; /* Ensure it's above .profile-bg */
+    top: 0; 
+    left: 30%; 
+    transform: translateX(-50%); 
+    z-index: 1; 
     background-image: url("profile-pic.png");
     background-size: cover;
     background-position: center;
@@ -336,7 +335,7 @@ h1.second-name {
   
   .profile-bg {
     position: absolute;
-    top: 70%; /* Move it further down */
+    top: 70%; 
     right: 20px; /* Adjust the right spacing */
     border-radius: 10px;
     background: white;
@@ -358,6 +357,10 @@ h1.second-name {
     background-color: rgba(255, 255, 255, 0.8); /* Add a background color */
     border-radius: 10px; /* Add border radius */
     text-align: center; /* Center align the content */
+    order: 1; 
   }
-  
+  .statistics {
+    order: 2; 
+    
+  }
 }
